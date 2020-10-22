@@ -1,0 +1,58 @@
+[v-cloak] {
+   display: none;
+}
+
+::selection {
+   background-color: $color-secondary;
+   color: $color-light;
+   @include text-stroke(.1rem, $color-dark);
+}
+
+*, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: 'Bangers', sans-serif;
+   font-size: 62.5%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   color: $color-dark;
+   background-color: $color-primary;
+}
+
+input {
+   font-family: inherit;
+   font-size: $font-size-md;
+   padding: 1rem 1.6rem;
+   border: $border-width solid $color-secondary;
+   background: $color-light;
+
+   &:focus {
+      outline: none;
+   }
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.centered-info-text {
+   position: fixed;
+   z-index: 999;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: $font-size-xl;
+   text-align: center;
+   @include text-stroke(.2rem, $color-light);
+}
